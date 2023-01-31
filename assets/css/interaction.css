@@ -1,0 +1,187 @@
+:root {
+  --offset: 1rem;
+}
+
+.hov *, .hov *:before, .hov *:after {
+  box-sizing: border-box;
+}
+@media (min-width: 40em) {
+  .hov body {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+}
+.hov img,
+.hov a {
+  display: block;
+  height: 100%;
+}
+.hov img {
+  max-width: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hov .grid {
+  display: grid;
+  grid-gap: 0;
+  overflow: hidden;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 80vh;
+}
+.hov .grid li {
+  position: relative;
+}
+.hov .grid li:hover ~ li:last-child:after,
+.hov .grid li:last-child:hover:after,
+.hov .grid li:hover ~ li:last-child:before,
+.hov .grid li:last-child:hover:before {
+  opacity: 1;
+  transition: 1s ease;
+}
+.hov .grid li:last-child:after,
+.hov .grid li:last-child:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  pointer-events: none;
+  clip-path: polygon(var(--offset) var(--offset), var(--offset) calc(100% - var(--offset)), calc(100% - var(--offset)) calc(100% - var(--offset)), calc(100% - var(--offset)) var(--offset));
+  -webkit-clip-path: polygon(var(--offset) var(--offset), var(--offset) calc(100% - var(--offset)), calc(100% - var(--offset)) calc(100% - var(--offset)), calc(100% - var(--offset)) var(--offset));
+  opacity: 0;
+  transition: opacity 1s, transform 1s 1s, background 1s;
+}
+.hov .grid li:last-child:after {
+  mix-blend-mode: multiply;
+  background: #aaafc3;
+}
+.hov .grid li:last-child:before {
+  backdrop-filter: grayscale(100%) blur(2px);
+  -webkit-backdrop-filter: grayscale(100%) blur(2px);
+}
+.hov .grid li:nth-child(1):hover ~ li:last-child:after {
+  background: #dc7d98;
+}
+.hov .grid li:nth-child(2):hover ~ li:last-child:after {
+  background: #90E0F3;
+}
+.hov .grid li:nth-child(3):hover ~ li:last-child:after {
+  background: #79b378;
+}
+.hov .grid li:nth-child(4):hover ~ li:last-child:after {
+  background: #987E14;
+}
+.hov .grid li:last-child:hover:after {
+  background: #FCAB64;
+}
+
+.grid {
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, 100%);
+}
+.grid li:last-child:after,
+.grid li:last-child:before {
+  left: 0%;
+  transform: translate3d(-200%, 0%, 0);
+}
+.grid li:nth-child(1):hover ~ li:last-child:after,
+.grid li:nth-child(1):hover ~ li:last-child:before {
+  transform: translate3d(-400%, 0%, 0);
+}
+.grid li:nth-child(2):hover ~ li:last-child:after,
+.grid li:nth-child(2):hover ~ li:last-child:before {
+  transform: translate3d(-300%, 0%, 0);
+}
+.grid li:nth-child(3):hover ~ li:last-child:after,
+.grid li:nth-child(3):hover ~ li:last-child:before {
+  transform: translate3d(-200%, 0%, 0);
+}
+.grid li:nth-child(4):hover ~ li:last-child:after,
+.grid li:nth-child(4):hover ~ li:last-child:before {
+  transform: translate3d(-100%, 0%, 0);
+}
+.grid li:last-child:hover:after,
+.grid li:last-child:hover:before {
+  transform: translate3d(0%, 0%, 0);
+}
+
+@media (max-width: 60em) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 25%);
+  }
+  .grid li:last-child:after,
+.grid li:last-child:before {
+    left: 0%;
+    transform: translate3d(-50%, -150%, 0);
+  }
+  .grid li:nth-child(1):hover ~ li:last-child:after,
+.grid li:nth-child(1):hover ~ li:last-child:before {
+    transform: translate3d(-100%, -300%, 0);
+  }
+  .grid li:nth-child(2):hover ~ li:last-child:after,
+.grid li:nth-child(2):hover ~ li:last-child:before {
+    transform: translate3d(0%, -300%, 0);
+  }
+  .grid li:nth-child(3):hover ~ li:last-child:after,
+.grid li:nth-child(3):hover ~ li:last-child:before {
+    transform: translate3d(-100%, -200%, 0);
+  }
+  .grid li:nth-child(4):hover ~ li:last-child:after,
+.grid li:nth-child(4):hover ~ li:last-child:before {
+    transform: translate3d(0%, -200%, 0);
+  }
+  .grid li:nth-child(5):hover ~ li:last-child:after,
+.grid li:nth-child(5):hover ~ li:last-child:before {
+    transform: translate3d(-100%, -100%, 0);
+  }
+  .grid li:nth-child(6):hover ~ li:last-child:after,
+.grid li:nth-child(6):hover ~ li:last-child:before {
+    transform: translate3d(0%, -100%, 0);
+  }
+  .grid li:nth-child(7):hover ~ li:last-child:after,
+.grid li:nth-child(7):hover ~ li:last-child:before {
+    transform: translate3d(-100%, 0%, 0);
+  }
+  .grid li:last-child:hover:after,
+.grid li:last-child:hover:before {
+    transform: translate3d(0%, 0%, 0);
+  }
+  :root {
+    --offset: 0;
+  }
+}
+.description {
+  font-family: "Unica One", sans-serif;
+  font-size: 1.25rem;
+  position: absolute;
+  display: block;
+  right: 2rem;
+  left: 2rem;
+  text-align: center;
+  top: 50%;
+  width: 80%;
+  margin: auto;
+  color: white;
+  z-index: 100;
+  opacity: 0;
+  transform: translate3d(0, -50%, 0);
+  transition: 0.3s 0s;
+  text-align: center;
+}
+.description h3 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.description p {
+  font-size: 0.75rem;
+}
+
+li:hover .description {
+  opacity: 1;
+  transition: 0.6s 0.3s;
+}/*# sourceMappingURL=interaction.css.map */
