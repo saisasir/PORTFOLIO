@@ -1150,15 +1150,15 @@ section {
 }
 
 .project .caption h3{ 
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
 /*text heading*/
 .project .caption h2{
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   font-size: 18px;
   font-weight: 300;
   /* text-align: center; */
