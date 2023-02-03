@@ -5,6 +5,32 @@
 * License: https://bootstrapmade.com/license/
 */
 
+
+/*
+Expanding images
+*/
+
+#expandable{
+  transition: 1s;
+}
+.enlarge{
+  width:100vw;
+  height:100vh;
+}
+
+.test-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  box-shadow: 0px 0 30px rgba(43, 84, 125, 0.08);
+}
+
+.test-image img{
+  width: 100%;
+  height: auto;
+}
+/* need to add width/height elem to originals for smooth transition! */
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -498,6 +524,7 @@ section {
     margin-left: auto;
     z-index: 5;
     opacity:0;
+    margin-bottom: 50px;
   }
 
   .test-item .caption .caption-content {
@@ -968,11 +995,12 @@ section {
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
-  max-width: 900px;
-  max-height: 90vh;
-  margin-bottom: 20px;
+  /* max-width: 900px; */
+  /* max-height: 90vh; */
+  margin-bottom: 50px;
   position: relative;
   object-fit: contain;
+  /* object-position: center center; */
   /* box-shadow: 0px 0 30px rgba(43, 84, 125, 0.08); */
 }
 /* .project .skelechair .single-image {
@@ -981,18 +1009,38 @@ section {
 
 .project .single-image img{
   display: block;
-  padding-left: auto;
-  padding-right: auto;
-  width: 100%; 
+  max-height: 90vh;
+  width: auto; 
+  margin-left: auto;
+  margin-right: auto;
+  /* object-position: center center; */
   object-fit: contain; 
   }
 
-.project .single-image-contained{
-  object-fit: scale-down;
-  max-height: 90vh; 
-  display: block;
+  .project .single-image.md {
+    max-width: 900px;
+  }
+
+  .project .single-image.lg {
+    max-width: 1100px;
+  }
+
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px; height: 0;
   overflow: hidden;
   }
+.video iframe,
+.video object,
+.video embed {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  }
+
 
 .project .section-title {
   text-align: center;
@@ -1075,6 +1123,7 @@ section {
 .project .section-title .details p {
   color: #919191;
   font-style: italic;
+  line-height: 30px;
   /* font-size: 13px; */
   /* box-shadow: 0px 0 30px rgba(43, 84, 125, 0.08); */
 }
@@ -1095,6 +1144,7 @@ section {
   max-width: 55em;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 60px;
   position: relative;
   /* box-shadow: 0px 0 30px rgba(43, 84, 125, 0.08); */
 }
@@ -1203,6 +1253,11 @@ section {
   max-width: 100vw;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 50px;
+  /* box-shadow: 0px 0 30px rgba(43, 84, 125, 0.08); */
+}
+
+.project .critter .single-image {
   margin-top: 50px;
   /* box-shadow: 0px 0 30px rgba(43, 84, 125, 0.08); */
 }

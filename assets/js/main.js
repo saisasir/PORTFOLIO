@@ -7,6 +7,12 @@
 (function() {
   "use strict";
 
+  document.addEventListener("contextmenu", function(e){
+    if (e.target.nodeName === "IMG") {
+        e.preventDefault();
+    }
+  }, false);
+
   /**
    * Easy selector helper function
    */
@@ -85,6 +91,14 @@
     }
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
+  }
+
+  /**
+   * Expanding images
+   */
+  let myImg = select('#expandable');
+  if (myImg) {
+    myImg.addEventListener("click", () => myImg.classList.toggle("enlarge"));
   }
 
   /**
