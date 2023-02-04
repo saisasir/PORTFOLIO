@@ -1007,6 +1007,12 @@ section {
   max-width: 1200px;
 } */
 
+.project .single-image h2 {
+  letter-spacing: 1.5px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
 .project .single-image img{
   display: block;
   max-height: 90vh;
@@ -1017,13 +1023,21 @@ section {
   object-fit: contain; 
   }
 
-  .project .single-image.md {
-    max-width: 900px;
-  }
+.project .single-image.md {
+  max-width: 900px;
+}
 
-  .project .single-image.lg {
-    max-width: 1100px;
-  }
+.project .single-image.lg {
+  max-width: 1100px;
+}
+
+.web .row img:first-child{
+  padding-bottom: 30px;
+}
+
+.book .row img{
+  height: 1000px;
+}
 
 .video {
   position: relative;
