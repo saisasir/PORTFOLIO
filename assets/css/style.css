@@ -1094,46 +1094,6 @@ section {
   margin-top: 30px;
 } */
 
-.project .section-title .details ul {
-  list-style: none;
-  padding:0;
-  font-size: 18px;
-  font-family: "Open sans", sans-serif;
-  font-weight: 700;
-  margin-bottom: 30px;
-  /* box-shadow: 0px 0 30px rgba(69, 80, 91, 0.08); */
-}
-
-@media (max-width: 992px) {
-  .project .section-title .details li {
-    width: 30%;
-
-  }
-}
-
-@media (min-width: 992px) {
-  .project .section-title .details li {
-    width: 300px;
-  }
-}
-
-.project .section-title .details li {
-  text-align:center;
-  vertical-align: top;
-  display:inline-block;
-  overflow-inline: hidden;
-  /* position:relative; */
-  /* margin-left: 0; */
-  letter-spacing: 3px;
-  margin-inline: 1%;
-  /* padding-inline: 3vw; */
-  /* padding-inline: max(6vw, 10vw); */
-  color: #C794C4;
-  text-transform: uppercase;
-  /* box-shadow: 0px 0 30px rgba(43, 84, 125, 0.08); */
-
-}
-
 .project .section-title .details p {
   color: #919191;
   font-style: italic;
@@ -1142,13 +1102,58 @@ section {
   /* box-shadow: 0px 0 30px rgba(43, 84, 125, 0.08); */
 }
 
+.project .section-title .details ul {
+  list-style: none;
+  padding:0;
+  font-size: 18px;
+  font-family: "Open sans", sans-serif;
+  font-weight: 700;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  /* box-shadow: 0px 0 30px rgba(69, 80, 91, 0.08); */
+}
+
+@media (max-width: 992px) {
+  .project .section-title .details li {
+    width: 45%;
+
+  }
+}
+
+@media (min-width: 992px) {
+  .project .section-title .details li {
+    width: 450px;
+  }
+}
+
+.project .section-title .details li {
+  text-align:left;
+  vertical-align: top;
+  display:inline-block;
+  overflow-inline: hidden;
+  /* position:relative; */
+  /* margin-left: 0; */
+  letter-spacing: 3px;
+  margin-inline: 1.5%;
+  /* padding-inline: 3vw; */
+  /* padding-inline: max(6vw, 10vw); */
+  color: #C794C4;
+  text-transform: lowercase;
+  /* box-shadow: 0px 0 30px rgba(43, 84, 125, 0.08); */
+
+}
+
+
+
 .project .section-title .details li p {
   text-transform: none;
   overflow-inline: hidden;
   letter-spacing: 0px;
   font-size: 15px;
   font-weight: 400;
-  margin: 0px;
+  margin-top: 5px;
+  line-height: 25px;
+  text-align:left;
 }
 
 .project .caption {
