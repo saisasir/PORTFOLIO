@@ -96,10 +96,56 @@
   /**
    * Expanding images
    */
-  let myImg = select('#expandable');
-  if (myImg) {
-    myImg.addEventListener("click", () => myImg.classList.toggle("enlarge"));
+  let expandables = select('.expandable', true);
+  if (expandables) {
+
+    expandables.forEach(expandable => {
+      expandable.addEventListener("click", () => 
+      expandable.classList.toggle("enlarge")
+    );
+
+    })
+
+    // myImg.addEventListener("click", () => 
+    //   myImg.classList.toggle("enlarge")
+    // );
   }
+
+  let gridexpandables = select('.grid-expandable', true);
+  if (gridexpandables) {
+    
+    gridexpandables.forEach(expandable => {
+      if (expandable.offsetWidth < window.innerWidth*.7 & expandable.offsetHeight < window.innerHeight*.7) {
+        expandable.style.cursor = 'pointer';
+        var toggler = ""
+        if (expandable.classList[0].startsWith('col-12')) {
+          expandable.classList.forEach(item => {
+            if (item.startsWith('col-xl-')) {
+              toggler = item   
+            }
+          }
+          )
+        }
+        // else {toggler=expandable.classList[0]}
+        else {toggler='col-12'}
+        console.log('toggler: ', toggler)
+
+        expandable.addEventListener("click", () => {
+          // let items = this.querySelector('[class^="col-xl"]')
+          expandable.classList.toggle(toggler)
+          console.log(expandable.classList)
+
+        }
+        
+
+      
+      
+      );
+    }
+    })
+  }
+
+
 
   /**
    * Mobile nav toggle

@@ -10,25 +10,72 @@
 Expanding images
 */
 
-#expandable{
+.expandable {
   transition: 1s;
-}
-.enlarge{
-  width:100vw;
-  height:100vh;
-}
-
-.test-image {
-  width: 200px;
-  height: 200px;
+  display: block;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+  max-height: 90vh;
+  margin-bottom: 50px;
+  position: relative;
   object-fit: contain;
-  box-shadow: 0px 0 30px rgba(43, 84, 125, 0.08);
+  cursor: pointer;
+  /* box-shadow: 0px 0 30px rgba(43, 84, 125, 0.08); */
 }
 
-.test-image img{
+/* @media (min-width:940px) {
+  .expandable {
+    cursor: zoom-in;
+  }
+  .enlarge {
+    cursor: zoom-out;
+  }
+} */
+
+.expandable img{
   width: 100%;
-  height: auto;
-}
+  height: 100%;
+  object-fit: contain;
+  }
+
+  .enlarge{
+    max-width: 100vw;
+    max-height: 100vh;
+    object-fit: contain;
+    cursor: pointer;
+    /* height:50vh; */
+  }
+  
+  .enlarge img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  
+
+  .col-12.grid-expandable {
+    /* box-shadow: 0px 0 30px rgba(43, 84, 125, 0.08); */
+    max-height: 100vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .grid-expandable {
+    /* cursor: zoom-in; */
+    transition: 1s;
+    object-fit: fill;
+    /* box-shadow: 0px 0 30px rgba(43, 84, 125, 0.08); */
+  }
+
+  .grid-expandable img{
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+  }
+
 /* need to add width/height elem to originals for smooth transition! */
 
 /*--------------------------------------------------------------
