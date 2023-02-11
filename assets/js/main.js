@@ -115,7 +115,7 @@
   if (gridexpandables) {
     
     gridexpandables.forEach(expandable => {
-      if (expandable.offsetWidth < window.innerWidth*.7 & expandable.offsetHeight < window.innerHeight*.7) {
+      if (expandable.offsetWidth < window.innerWidth*.7) {
         expandable.style.cursor = 'pointer';
         var toggler = ""
         if (expandable.classList[0].startsWith('col-12')) {
