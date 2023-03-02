@@ -103,6 +103,12 @@ potentialDemo(potential);
 kineticDemo(kinetic);
 controlButtons(kinetic);
 
+console.log(screen.width);
+(function() {
+    document.documentElement.style.setProperty("--device-width", screen.width + "px");
+}());
+console.log('d: ', $(document.documentElement).css("--device-width"));
+
 /* * * * * * * * * * * * *
    * Helper Functions  *
  * * * * * * * * * * * * */

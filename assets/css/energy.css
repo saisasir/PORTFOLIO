@@ -7,6 +7,7 @@
     --b: 0;
     --scroll: 0;
     --num-screens: 12;
+    --device-width: 0;
 }   
 
 /* @property --initial{
@@ -551,6 +552,68 @@ button:focus {
     animation-timing-function: cubic-bezier(.7, .05, .85, .5);
 }
 
+.pendulum{
+    position:absolute; 
+    width: 220px;
+    height: 180px;
+    /* background-color: #f8c6cf; */
+    top:60%;
+    left:  50%;
+    border-radius: 5%;
+    align-items: center;
+    border-top: 10px solid #ffffff;
+    transform: translate(-50%, -50%);
+    }
+  .pendulum_box{
+    display: flex;
+    padding: 120px 0 0 10px;
+    position: absolute;
+    flex: 1;
+  }
+  .pendulum .ball{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    /* background-color: #455681; */
+    position: relative;
+    transform-origin: 50% -300%;
+    
+  }
+  .pendulum .ball::before{
+      content: '';
+      width: 1px;
+      height: 120px;
+      background-color: #fffeff;
+      left: 18px;
+      top: -120px;
+      position: absolute;
+    }
+  
+    .pendulum .ball.first{
+    animation: firstball .9s alternate ease-in infinite;
+  }
+  
+  @keyframes firstball{
+    0%{
+      transform: rotate(35deg);
+    }
+    50%{
+      transform: rotate(0deg);
+    }
+  }
+  
+  .pendulum .ball.last{
+    animation: lastball .9s alternate ease-out infinite;
+  }
+  
+  @keyframes lastball{
+    50%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(-35deg);
+    }
+  }
 
 
 @-webkit-keyframes glow {
@@ -662,8 +725,14 @@ button:focus {
 }
 
 @media (pointer:coarse) {
+
     body {
         position: fixed;
+        max-width: var(--device-width)
+    }
+
+    .pendulum {
+        display: none;
     }
     .mouse-glow {
         left: calc(50% - 75px);
@@ -676,11 +745,9 @@ button:focus {
         display: none;
     }
     .support-message {
-        width:-moz-fit-content;
-        width:fit-content;
-        max-width: 80%;
+        max-width: calc(var(--device-width) * .8);
         margin-top: 20%;
-        font-size: 2.5em;
+        font-size: 2em;
         line-height: 1.3em;
         display: block;
         margin-left: auto;
