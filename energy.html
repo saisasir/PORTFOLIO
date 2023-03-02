@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+        <link href="assets/css/energy.css" rel="stylesheet">
+        <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500&display=swap" rel="stylesheet">
+
+
+        <title>interactive energy visual</title>
+    </head>
+    <body>
+        <div class="scroll-sign">
+            scroll →
+        </div>
+        <div class="coords"></div>
+        <div class="mouse-glow"></div>
+        <div class="pages">
+            <div class="page">
+                <div class = "support-message">
+                    <p>It looks like you're on a mobile device. This page currently only works on desktop, sorry! This issue is being worked on 🔧</p>
+                </div>
+                <div class="text" data-aos="zoom-out-down">
+                    <p>Do you know what <span id="energyText">energy</span> is?</p>
+                </div>
+            </div>
+            <div class="page">
+                <div class="text" data-aos="fade-left">
+                    <p>You might hear the term a lot but it's actually a pretty abstract concept. <br><br>
+                        It can't be seen or touched, since it's not a substance. Instead, its <i>effects</i> can be observed and measured.</p>
+                </div>
+                <div class = "ball invisible blinking">
+                    <img src="assets/img/design_projects/energy/blinking.gif" alt="">
+                </div>
+            </div>
+            <div class="page">
+                <div class="text" data-aos="fade-left">
+                    <p> Energy is a quantity that measures a physical system's ability to produce change, like the movement of objects, emission of light, or variation of temperature.</p>
+                </div>
+            </div>
+
+            <div class="page">
+                <div class="text" data-aos="fade-left">
+                    <p>There are different types of energy, depending on the physical properties of the system. But all of them fall under two categories: <span class="pot-text">potential</span> and <span class="kin-text">kinetic</span>.</p>
+                </div>
+            </div>
+            <div class="page">
+                <div class="text" data-aos="fade-left">
+                    <p><span class="pot-text" id="potText">Potential</span> energy is stored energy. For example, gravitational potential energy is the energy an object possesses due to its relative position in a gravitational force field. </p>
+                </div>
+            </div>
+            <div class="page">
+                <div class="text">
+                    <p>In other words, if an object has the ability to fall, it has gravitational potential energy.</p>
+                </div>
+                <div class = "ball demo blinking" id="potential">
+                    <div class="arrow">↓</div>
+                    <img src="assets/img/design_projects/energy/blinking.gif" alt="">
+                    <div class="instructions">
+                        Drag me up
+                    </div>
+                </div>
+                <div class="ground"></div>
+
+            </div>
+            <div class="page">
+                <div class="text" data-aos="fade-left">
+                    <p>And <span class="kin-text">kinetic</span> energy is the energy an object possesses due to its motion.</p>
+                </div>
+            </div>
+
+            <div class="page double">
+                <div class = "expln kinetic"></div>
+                <div class="sticky-container">
+                    <div class="text">
+                        <p></p>
+                    </div>
+                    <div class = "ball demo blinking" id="kinetic">
+                        <div class="arrow">↓</div>
+                        <div class="energy-level-hidden"></div>
+                        <img src="assets/img/design_projects/energy/blinking.gif" alt="">
+                        <div class="instructions">
+                            Click on me
+                        </div>
+                    </div>
+                    <div class="ground"></div>
+                    
+                </div>
+    
+                <div class="page">
+                    <div class="expln">
+                        <p>Now, take a closer look at what happens to potential energy when there's a lot of kinetic energy, and vice versa. <br>
+                        And how about total energy?</p>
+                    </div>
+                    <div class="controls">
+                        <button id="kinButton">kinetic</button>
+                        <button id="potButton">potential</button>
+                        <button id="totalButton">total</button>
+                    </div>
+                </div>
+
+            </div>
+            
+
+            <div class="page">
+                <div class="text">
+                    <p>Did you notice how, although potential and kinetic energy was changing, the amount of total energy stayed the same?
+                        <br><br> That's because energy is <i>conserved</i>. It can neither be created nor destroyed. Instead, like you saw, it can be transformed... </p>
+                </div>
+                <div class="ball-wrapper">
+                    <div class = "square">
+                    </div>
+                </div>
+            </div>
+            <div class="page">
+                <div class="wall"></div>
+                <div class="text">
+                    <p>...and transferred from one system to another.</p>
+                </div>
+                <div class="ball-wrapper-longer">
+                    <div class = "ball stick spinning shifting">
+                        <img src="assets/img/design_projects/energy/shifting.GIF" alt="">
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="page">
+                <div class="text">
+                    <p>Now, if energy can't be destroyed, what do we mean when we say things "lose" energy? <br><br>
+                    To be continued...</p>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="assets/js/energy.js"></script>
+        <script src="assets/vendor/aos/aos-hscroll.js"></script>
+    </body>
+</html>
