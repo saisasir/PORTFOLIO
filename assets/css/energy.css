@@ -127,9 +127,12 @@ button:focus {
     width: 150px;
     height: 150px;
     opacity: 0.9;
+    /* opacity: 0; */
     /* transition: width 2s, height 2s; */
+
     -webkit-animation: glow 2.5s alternate-reverse infinite;
     animation: glow 2.5s alternate-reverse infinite;
+
     left: calc(var(--x, 0) * 1px - 75px);
     top: calc(var(--y, 0) * 1px - 75px);
     position: fixed;

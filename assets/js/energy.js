@@ -67,12 +67,16 @@ window.addEventListener('scroll', () => {
     // readout.innerText = `scroll: ${hScroll}`;
 })
 
+var mouseMoving = false;
+
+
 document.addEventListener("mousemove", (e) => {
-    // clearTimeout(timer);
+
     mouseglow.style.setProperty("--x", e.clientX);
     mouseglow.style.setProperty("--y", e.clientY);
-    // timer = setTimeout(turnOffGlow, 500);
+
 });
+
 
 function turnOnGlow(e) {
     e = e || window.event;
@@ -92,11 +96,6 @@ function turnOffGlow(e) {
     //     bg.style.cursor = "none";
     // }
     
-}
-
-//disappear on scroll
-function disappear() {
-    $(this).children(".text").css("display", "none");
 }
 
 potentialDemo(potential);
@@ -267,7 +266,7 @@ function kineticDemo(elmnt) {
 }
 
 /* * *
-    potential and kinetic
+    control buttons
 * * */
 
 function controlButtons(elmnt) {
