@@ -542,14 +542,19 @@ button:focus {
     align-items: center;
     border-top: 10px solid #ffffff;
     transform: translate(-50%, -50%);
-    }
-  .pendulum_box{
+}
+
+.pendulum .arrow {
+    position: fixed;
+}
+
+.pendulum_box{
     display: flex;
     padding: 120px 0 0 10px;
     position: absolute;
     flex: 1;
-  }
-  .pendulum .ball{
+}
+.pendulum .ball{
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -558,24 +563,46 @@ button:focus {
     position: relative;
     transform-origin: 50% -300%;   
 
-  }
-  .pendulum .ball::before{
-      content: '';
-      width: 1px;
-      height: 120px;
-      background-color: #fffeff;
-      left: 18px;
-      top: -120px;
-      position: absolute;
-      /* opacity: 1; */
+}
+.pendulum .ball::before{
+    content: '';
+    width: 1px;
+    height: 120px;
+    background-color: #fffeff;
+    left: 18px;
+    top: -120px;
+    position: absolute;
+    /* opacity: 1; */
+}
+
+    /* .ball.first{
+        animation: firstball .9s alternate ease-in infinite;
+    } */
+
+    /* .ball.last{
+    animation: lastball .9s alternate ease-out infinite;
+  } */
+  
+    .pendulum:hover .arrow {
+        display: none;
     }
 
-    .ball.first{
-        animation: firstball .9s alternate ease-in infinite;
-    }
-  
     .pendulum:hover .ball.first{
         animation: firstballenergy .9s alternate ease-in infinite;
+    }
+
+    .pendulum:hover .ball.last{
+        animation: lastballenergy .9s alternate ease-out infinite;
+    }
+
+    .pendulum:hover .ball.second{
+        animation: secball .9s alternate ease-out infinite;
+    }
+    .pendulum:hover .ball.third{
+        animation: thirdball .9s alternate ease-out infinite;
+    }
+    .pendulum:hover .ball.fourth{
+        animation: fourthball .9s alternate ease-out infinite;
     }
 
   @-webkit-keyframes firstball{
@@ -606,6 +633,7 @@ button:focus {
       /* background: radial-gradient(circle at center, white 0, transparent 100%); */
       background: radial-gradient(rgb(183, 194, 255), #3984ff00 200%);
     }
+    
     50%{
       transform: rotate(0deg);
       /* background: radial-gradient(circle at center, transparent 0, transparent 100%); */
@@ -614,13 +642,6 @@ button:focus {
     75%{
         background: radial-gradient(rgb(183, 194, 255), #3984ff00 0%);
     }
-  }
-  
-  .ball.last{
-    animation: lastball .9s alternate ease-out infinite;
-  }
-  .pendulum:hover .ball.last{
-    animation: lastballenergy .9s alternate ease-out infinite;
   }
   
   @-webkit-keyframes lastball{
@@ -652,16 +673,6 @@ button:focus {
         transform: rotate(-35deg);
       background: radial-gradient(rgb(183, 194, 255), #3984ff00 200%);
     }
-  }
-
-  .pendulum:hover .ball.second{
-    animation: secball .9s alternate ease-out infinite;
-  }
-  .pendulum:hover .ball.third{
-    animation: thirdball .9s alternate ease-out infinite;
-  }
-  .pendulum:hover .ball.fourth{
-    animation: fourthball .9s alternate ease-out infinite;
   }
 
   @keyframes secball{
