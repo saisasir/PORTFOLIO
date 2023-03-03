@@ -553,10 +553,11 @@ button:focus {
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    /* background-color: #455681; */
+    /* background: radial-gradient(rgb(183, 194, 255), #3984ff00 200%); */
+    /* background: radial-gradient(circle at center, white 0, transparent 100%); */
     position: relative;
-    transform-origin: 50% -300%;
-    
+    transform-origin: 50% -300%;   
+
   }
   .pendulum .ball::before{
       content: '';
@@ -566,31 +567,136 @@ button:focus {
       left: 18px;
       top: -120px;
       position: absolute;
+      /* opacity: 1; */
+    }
+
+    .ball.first{
+        animation: firstball .9s alternate ease-in infinite;
     }
   
-    .pendulum .ball.first{
-    animation: firstball .9s alternate ease-in infinite;
-  }
-  
-  @keyframes firstball{
+    .pendulum:hover .ball.first{
+        animation: firstballenergy .9s alternate ease-in infinite;
+    }
+
+  @-webkit-keyframes firstball{
     0%{
       transform: rotate(35deg);
+      background: radial-gradient(circle at center, white 0, transparent 100%);
     }
     50%{
       transform: rotate(0deg);
+      background: radial-gradient(circle at center, transparent 0, transparent 100%);
+    }
+  }
+
+  @keyframes firstball{
+    0%{
+      transform: rotate(35deg);
+      /* background: radial-gradient(circle at center, white 0, transparent 100%); */
+    }
+    50%{
+      transform: rotate(0deg);
+      
+    }
+  }
+
+  @keyframes firstballenergy{
+    0%{
+      transform: rotate(35deg);
+      /* background: radial-gradient(circle at center, white 0, transparent 100%); */
+      background: radial-gradient(rgb(183, 194, 255), #3984ff00 200%);
+    }
+    50%{
+      transform: rotate(0deg);
+      /* background: radial-gradient(circle at center, transparent 0, transparent 100%); */
+      
+    }
+    75%{
+        background: radial-gradient(rgb(183, 194, 255), #3984ff00 0%);
     }
   }
   
-  .pendulum .ball.last{
+  .ball.last{
     animation: lastball .9s alternate ease-out infinite;
   }
+  .pendulum:hover .ball.last{
+    animation: lastballenergy .9s alternate ease-out infinite;
+  }
   
-  @keyframes lastball{
+  @-webkit-keyframes lastball{
     50%{
       transform: rotate(0deg);
     }
     100%{
       transform: rotate(-35deg);
+    }
+  }
+  
+  @keyframes lastball{
+    50%{
+        transform: rotate(0deg);
+      }
+      100%{
+        transform: rotate(-35deg);
+      }
+  }
+
+  @keyframes lastballenergy{
+    25%{
+        background: radial-gradient(rgb(183, 194, 255), #3984ff00 0%);
+    }
+    50%{
+        transform: rotate(0deg);
+      }
+    100%{
+        transform: rotate(-35deg);
+      background: radial-gradient(rgb(183, 194, 255), #3984ff00 200%);
+    }
+  }
+
+  .pendulum:hover .ball.second{
+    animation: secball .9s alternate ease-out infinite;
+  }
+  .pendulum:hover .ball.third{
+    animation: thirdball .9s alternate ease-out infinite;
+  }
+  .pendulum:hover .ball.fourth{
+    animation: fourthball .9s alternate ease-out infinite;
+  }
+
+  @keyframes secball{
+    45%{
+        background: radial-gradient(rgb(183, 194, 255), #3984ff00 0%);
+    }
+    55%{
+        background: radial-gradient(rgb(183, 194, 255), #3984ff00 200%);
+    }
+    60%{
+      background: radial-gradient(rgb(183, 194, 255), #3984ff00 0%);
+    }
+  }
+
+  @keyframes thirdball{
+    52%{
+        background: radial-gradient(rgb(183, 194, 255), #3984ff00 0%);
+    }
+    57%{
+        background: radial-gradient(rgb(183, 194, 255), #3984ff00 200%);
+    }
+    62%{
+      background: radial-gradient(rgb(183, 194, 255), #3984ff00 0%);
+    }
+  }
+
+  @keyframes fourthball{
+    57%{
+        background: radial-gradient(rgb(183, 194, 255), #3984ff00 0%);
+    }
+    62%{
+        background: radial-gradient(rgb(183, 194, 255), #3984ff00 200%);
+    }
+    67%{
+      background: radial-gradient(rgb(183, 194, 255), #3984ff00 0%);
     }
   }
 

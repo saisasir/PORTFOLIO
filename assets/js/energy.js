@@ -52,6 +52,10 @@ const kinButton = select("#kinButton");
 const totalButton = select("#totalButton");
 const restartButton = select("#restartButton");
 
+const pendulum = select(".pendulum");
+
+
+
 let timer;
 
 //percentage of page scrolled
@@ -76,6 +80,10 @@ document.addEventListener("mousemove", (e) => {
     mouseglow.style.setProperty("--y", e.clientY);
 
 });
+
+pendulum.onmouseenter = turnOffGlow;
+pendulum.onmouseleave = turnOnGlow;
+
 
 
 function turnOnGlow(e) {
