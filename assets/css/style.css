@@ -216,7 +216,8 @@ h6 {
     width: 300px;
     background: #fff;
     border-right: 1px solid #e6e9ec;
-    left: -300px;
+    left: auto;
+    right: -300px;
   }
 }
 
@@ -344,7 +345,7 @@ h6 {
 }
 
 .mobile-nav-active #header {
-  left: 0;
+  right: 0;
 }
 
 .mobile-nav-active .mobile-nav-toggle {
@@ -372,7 +373,7 @@ h6 {
 
 #hero > .overlay {
   background: rgba(255, 255, 255, 0.6);
-  position: fixed;
+  position: absolute;
   bottom: 0;
   top: 0;
   left: 0;
@@ -401,6 +402,7 @@ h6 {
   border-color: #C794C4 #f7f8f9  ; 
   /* #77297F; */
   box-shadow: 20px 20px 30px rgba(0,0,0,0.3);
+  overflow: hidden;
 }
 
 #hero h1 {
@@ -519,6 +521,7 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
