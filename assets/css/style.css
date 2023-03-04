@@ -358,7 +358,8 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/design_projects/random/clouds.png") center no-repeat;
+  /* background-color: #C794C4; */
+  background: url("../img/design_projects/random/clouds.png") center no-repeat rgba(0,0,0,0.3);
   background-size: cover;
   position: relative;
 }
@@ -369,7 +370,16 @@ h6 {
   }
 }
 
-#hero:before {
+#hero > .overlay {
+  background: rgba(255, 255, 255, 0.6);
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* #hero:before {
   content: "";
   background: rgba(255, 255, 255, 0.6);
   position: absolute;
@@ -377,6 +387,20 @@ h6 {
   top: 0;
   left: 0;
   right: 0;
+} */
+
+#hero:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  /* border-width: 0 200px 200px 0; */
+  border-width: 200px 200px 0 0px;
+  border-style: solid;
+  border-color: #C794C4 #f7f8f9  ; 
+  /* #77297F; */
+  box-shadow: 20px 20px 30px rgba(0,0,0,0.3);
 }
 
 #hero h1 {
