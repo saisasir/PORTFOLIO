@@ -389,7 +389,8 @@ h6 {
   left: 0;
   background-size: 100%;
   background-image: linear-gradient(to right bottom,#fff 46%,#cdcdcd 49.9%, #e7cde0 49.91%, #f4e2ef 100%);
-  transition: all cubic-bezier(0.52, 0, 0.98, 1.0) .5s;
+  transition: all cubic-bezier(0.52, 0, 0.78, 1.0) .6s;
+  transition-delay: 200ms;
   overflow: hidden;
 }
 
