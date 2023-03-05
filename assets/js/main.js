@@ -66,6 +66,14 @@
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
 
+  // page corner flip effect
+  
+  const flipcorner = () => {
+    let pagecorner = select('.page-corner-up');
+    pagecorner.classList.add("page-corner-down");
+  }
+  window.addEventListener('load', flipcorner)
+
   /**
    * Scrolls to an element with header offset
    */

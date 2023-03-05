@@ -380,30 +380,40 @@ h6 {
   right: 0;
 }
 
-/* #hero:before {
-  content: "";
-  background: rgba(255, 255, 255, 0.6);
+.page-corner-up {
   position: absolute;
-  bottom: 0;
+  z-index: 1;
+  width: 0;
+  height: 0;
   top: 0;
   left: 0;
-  right: 0;
-} */
+  background-size: 100%;
+  background-image: linear-gradient(to right bottom,#fff 46%,#cdcdcd 49.9%, #e7cde0 49.91%, #f4e2ef 100%);
+  transition: all cubic-bezier(0.52, 0, 0.98, 1.0) .5s;
+  overflow: hidden;
+}
 
-#hero:before {
+.page-corner-down {
+  width: 150px;
+  height: 150px;
+  box-shadow: 15px 15px 30px rgba(0,0,0,0.3);
+
+}
+
+/* static corner
+
+ #hero:before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   z-index: 2;
-  /* border-width: 0 200px 200px 0; */
   border-width: 200px 200px 0 0px;
   border-style: solid;
   border-color: #fff #dfc5d8; 
-  /* #77297F; */
   box-shadow: 20px 20px 30px rgba(0,0,0,0.4);
   overflow: hidden;
-}
+} */
 
 #hero h1 {
   margin: 0;
