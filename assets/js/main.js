@@ -118,12 +118,12 @@
     //   myImg.classList.toggle("enlarge")
     // );
   }
-
+  
   let gridexpandables = select('.grid-expandable', true);
   if (gridexpandables) {
     
     gridexpandables.forEach(expandable => {
-      if (expandable.offsetWidth < window.innerWidth*.7) {
+      if ((expandable.offsetWidth < window.innerWidth*.7) & (expandable.offsetHeight < window.innerHeight*.8)) {
         expandable.style.cursor = 'pointer';
         var toggler = ""
         if (expandable.classList[0].startsWith('col-12')) {
