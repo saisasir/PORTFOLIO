@@ -65,9 +65,10 @@
   }
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
-
-  // page corner flip effect
   
+  /**
+   * Page corner flip effect
+   */
   const flipcorner = () => {
     let pagecorner = select('.page-corner-up');
     pagecorner.classList.add("page-corner-down");
@@ -108,23 +109,26 @@
   if (expandables) {
 
     expandables.forEach(expandable => {
-      expandable.addEventListener("click", () => 
-      expandable.classList.toggle("enlarge")
-    );
-
+      if (!(expandable.offsetWidth > window.innerWidth*.8)) {
+        expandable.classList.add("zoomable");
+        expandable.addEventListener("click", () => 
+        {
+          expandable.classList.toggle("enlarge");
+        }
+        );
+      }
     })
-
-    // myImg.addEventListener("click", () => 
-    //   myImg.classList.toggle("enlarge")
-    // );
   }
   
+  /**
+   * For expanding images that are in a bootstrap grid
+   */
   let gridexpandables = select('.grid-expandable', true);
   if (gridexpandables) {
     
     gridexpandables.forEach(expandable => {
-      if ((expandable.offsetWidth < window.innerWidth*.7) & (expandable.offsetHeight < window.innerHeight*.8)) {
-        expandable.style.cursor = 'pointer';
+      if (!(expandable.offsetWidth > window.innerWidth*.7)) {
+        expandable.classList.add("zoomable");
         var toggler = ""
         if (expandable.classList[0].startsWith('col-12')) {
           expandable.classList.forEach(item => {
@@ -134,12 +138,10 @@
           }
           )
         }
-        // else {toggler=expandable.classList[0]}
         else {toggler='col-12'}
         console.log('toggler: ', toggler)
 
         expandable.addEventListener("click", () => {
-          // let items = this.querySelector('[class^="col-xl"]')
           expandable.classList.toggle(toggler)
           console.log(expandable.classList)
 
