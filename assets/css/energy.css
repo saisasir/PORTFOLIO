@@ -6,7 +6,7 @@
     --g: 255;
     --b: 0;
     --scroll: 0;
-    --num-screens: 12;
+    --num-screens: 16;
     --device-width: 0;
 }   
 
@@ -41,6 +41,12 @@ body {
     /* position: sticky; */
 }
 
+.page.stick {
+    position: sticky;
+    left: 0%;
+    z-index: 10;
+}
+
 .support-message {
     display: none;
 }
@@ -66,11 +72,12 @@ body {
     max-width: 80%;
     /* border: 1px solid red; */
     margin-top: 150px;
-    font-size: 3em;
+    font-size: 2.8em;
     line-height: 1.3em;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 300;
     
     color: white;
 }
@@ -147,8 +154,8 @@ button:focus {
     top: -60px;
     margin-bottom: -60px;
     left: 40%;
-    -webkit-animation: glow 1.2s alternate-reverse infinite;
-    animation: glow 1.5s alternate-reverse infinite;
+    -webkit-animation: glow 2s alternate-reverse infinite;
+    animation: glow 2s alternate-reverse infinite;
 }
 
 
@@ -312,7 +319,6 @@ button:focus {
     bottom: 101px;
     position: absolute;
     width: calc(150vw + 50px);
-    /* border: solid pink; */
 }
 
 .ball-wrapper-shorter {
@@ -536,13 +542,67 @@ button:focus {
     width: 220px;
     height: 180px;
     /* background-color: #f8c6cf; */
-    top:60%;
+    top:70%;
     left:  50%;
     border-radius: 5%;
     align-items: center;
     border-top: 10px solid #ffffff;
     transform: translate(-50%, -50%);
 }
+
+.sticky-pendulum-container.outer {
+    position: absolute;
+    width: 200vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+}
+
+.ball.first.slowmo {
+    animation: falling 1700ms linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+.ball.last.slowmo {
+    animation: rising 1700ms linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+
+/* .pendulum:hover .ball.first.slowmo {
+    background: radial-gradient(rgb(183, 194, 255), #3984ff00 200%);
+} */
+
+
+
+  @keyframes falling{
+    0%{
+      transform: rotate(35deg);
+      /* background: radial-gradient(circle at center, white 0, transparent 100%); */
+    }
+    50%{
+      transform: rotate(0deg);
+      
+    }
+  }
+
+  @keyframes rising{
+    50%{
+      transform: rotate(0deg);
+      /* background: radial-gradient(circle at center, white 0, transparent 100%); */
+    }
+    100%{
+      transform: rotate(-35deg);
+      
+    }
+  }
+
 
 .pendulum .arrow {
     position: fixed;
@@ -575,51 +635,52 @@ button:focus {
     /* opacity: 1; */
 }
 
-    /* .ball.first{
+    .ball.first{
         animation: firstball .9s alternate ease-in infinite;
-    } */
+    }
 
-    /* .ball.last{
+    .ball.last{
     animation: lastball .9s alternate ease-out infinite;
-  } */
+    }
   
     .pendulum:hover .arrow {
         display: none;
     }
 
-    .pendulum:hover .ball.first{
+    .ball:hover > .arrow {
+        display: none;
+    }
+
+    .pendulum.energy:hover .ball.first{
         animation: firstballenergy .9s alternate ease-in infinite;
     }
 
-    .pendulum:hover .ball.last{
+    .pendulum.energy:hover .ball.last{
         animation: lastballenergy .9s alternate ease-out infinite;
     }
 
-    .pendulum:hover .ball.second{
+    .pendulum.energy:hover .ball.second{
         animation: secball .9s alternate ease-out infinite;
     }
-    .pendulum:hover .ball.third{
+    .pendulum.energy:hover .ball.third{
         animation: thirdball .9s alternate ease-out infinite;
     }
-    .pendulum:hover .ball.fourth{
+    .pendulum.energy:hover .ball.fourth{
         animation: fourthball .9s alternate ease-out infinite;
     }
 
   @-webkit-keyframes firstball{
     0%{
       transform: rotate(35deg);
-      background: radial-gradient(circle at center, white 0, transparent 100%);
     }
     50%{
       transform: rotate(0deg);
-      background: radial-gradient(circle at center, transparent 0, transparent 100%);
     }
   }
 
   @keyframes firstball{
     0%{
       transform: rotate(35deg);
-      /* background: radial-gradient(circle at center, white 0, transparent 100%); */
     }
     50%{
       transform: rotate(0deg);

@@ -52,9 +52,23 @@ const kinButton = select("#kinButton");
 const totalButton = select("#totalButton");
 const restartButton = select("#restartButton");
 
-const pendulum = select(".pendulum");
+const pendulums = select(".pendulum.energy", true);
+if (pendulums) {
+    
+    pendulums.forEach(pendulum => {
+        pendulum.onmouseenter = turnOffGlow;
+        pendulum.onmouseleave = turnOnGlow;
+    })
+}
 
-
+const lastpage = select(".page.last");
+const scrollsign = select(".scroll-sign");
+lastpage.onmouseenter = () => {
+    scrollsign.style.display = "none";
+}
+lastpage.onmouseleave = () => {
+    scrollsign.style.display = "block";
+}
 
 let timer;
 
@@ -66,7 +80,7 @@ window.addEventListener('scroll', () => {
     // hScroll = window.pageXOffset / (document.body.offsetWidth);
     var numScreens = $(document.documentElement).css("--num-screens");
     // var test = (hScroll - 11.7/numScreens + .0125) * 25;
-    var test = (hScroll - .864) * 25;
+    var test = (hScroll - .467) * 25;
     document.documentElement.style.setProperty("--scroll", test);
     // readout.innerText = `scroll: ${hScroll}`;
 })
@@ -80,9 +94,6 @@ document.addEventListener("mousemove", (e) => {
     mouseglow.style.setProperty("--y", e.clientY);
 
 });
-
-pendulum.onmouseenter = turnOffGlow;
-pendulum.onmouseleave = turnOnGlow;
 
 
 
@@ -157,7 +168,7 @@ function potentialDemo(elmnt) {
         dragMouseDown(e);
         text.classList.remove("text");
         text.classList.add("expln");
-        text.innerText = `The ball's aura visualizes the amount of gravitational potential energy it possesses. See how it changes with respect to height?`;
+        text.innerText = `See how gravitational potential energy changes with respect to height?`;
     }
     elmnt.onmouseenter = switchGlow;
     elmnt.onmouseleave = switchGlow;
