@@ -9,7 +9,7 @@ document.addEventListener("contextmenu", function(e){
    */
 window.addEventListener('load', () => {
     AOS.init({
-      duration: 2000,
+      duration: 1200,
       delay: 100,
       easing: 'ease-in-out',
       once: false,
