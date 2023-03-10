@@ -51,6 +51,17 @@ body {
     display: none;
 }
 
+#portfolio-return {
+    position: absolute;
+    /* margin-right: 10px;
+    margin-bottom: 10px; */
+    left: 20px;
+    top: 20px;
+    color: white;
+    font-weight: 100;
+    text-decoration: none;
+}
+
 .sticky-container {
     position: -webkit-sticky;
     position: sticky;
@@ -586,14 +597,14 @@ button:focus {
       transform: rotate(35deg);
       /* background: radial-gradient(circle at center, white 0, transparent 100%); */
     }
-    50%{
+   49%{
       transform: rotate(0deg);
       
     }
   }
 
   @keyframes rising{
-    50%{
+    51%{
       transform: rotate(0deg);
       /* background: radial-gradient(circle at center, white 0, transparent 100%); */
     }
