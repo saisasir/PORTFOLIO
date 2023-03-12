@@ -11,7 +11,7 @@
 --------------------------------------------------------------*/
 :root {
   --main-color: #C794C4;
-  --accent-color: var(--accent-color);
+  --accent-color: #ac5bc2;
   --main-font: "M Plus Rounded 1c", sans-serif;
   --accent-font: "Poppins", sans-serif;
 }
