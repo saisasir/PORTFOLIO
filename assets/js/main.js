@@ -243,7 +243,27 @@
    */
   window.addEventListener('load', () => {
     let portfolioContainer = select('.portfolio-container');
+    let projectGrid = select('.project-grid');
+
     if (portfolioContainer) {
+
+      // if (projectGrid) {
+      //   let testIsotope = new Isotope(projectGrid, {
+      //     itemSelector: '.grid-item',
+      //     percentPosition: true,
+      //     masonry: {
+      //       // use outer width of grid-sizer for columnWidth
+      //       columnWidth: '.grid-sizer',
+      //       gutter: '.gutter-sizer'
+      //     }
+      //   })
+      // }
+
+      let projects = select('.portfolio-wrap', true);
+      projects.forEach(function(e) {
+
+      })
+
       let portfolioIsotope = new Isotope(portfolioContainer, {
         itemSelector: '.portfolio-item'
       });
