@@ -397,14 +397,14 @@ h6 {
   /* outline: black solid 1px; */
   margin-right: 20px;
   transition: 0.3s;
-  box-shadow: 0 0 12px 3px #000000;
+  box-shadow: 0 0 14px 3px #000000;
 }
 
 #hero .color-picker button:focus {
   outline: none;
   /* outline: rgb(117, 117, 117) solid .5px; */
   /* border: 2px inset rgba(163, 163, 163, 0.646); */
-  box-shadow: 0 0 7px #434343;
+  box-shadow: 0 0 7px #000000;
   transform: translate(1px, 1px) scale(0.98);
 
 }

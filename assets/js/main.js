@@ -161,11 +161,6 @@
         $(document.documentElement).css("--lighter-color", lighterColor);
         $(document.documentElement).css("--main-color", selectColorhex);
         $(document.documentElement).css("--accent-color", darkerColor);}, 850)
-        
-
-      
-      console.log($(this).css("border"));
-      // flipcorner();
 
     }, true)
 
