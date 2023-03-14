@@ -51,7 +51,7 @@
         <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
         <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-library"></i> <span>Portfolio</span></a></li> 
         <li><a href="#about" class="nav-link scrollto"><i class="bx bx-meh-blank"></i> <span>About</span></a></li>
-        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file"></i> <span>Resume</span></a></li>
         <!-- <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope-open"></i> <span>Contact</span></a></li> -->
       </ul>
     </nav><!-- .nav-menu -->
@@ -66,12 +66,11 @@
       <h1>Ibuki Iwasaki</h1>
       <!-- <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p> -->
       <p>Welcome to my corner of the internet.</p>
-      <div class="social-links">
-        <a href="https://www.instagram.com/buksters/" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
-        <a href="https://github.com/buksters" class="github" target="_blank"><i class="bx bxl-github"></i></a>
-        <a href="https://linkedin.com/in/ibuki-iwasaki
-        " class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
-        <a href="mailto:ibukiwasaki@gmail.com"><i class="bx bx-envelope"></i></a>
+      <div class="color-picker">
+        <button class='color-change' id="color-1" autofocus></a>
+        <button class='color-change' id="color-2"></a>
+        <button class='color-change' id="color-3"></a>
+        <button class='color-change' id="color-4"></a>
       </div>
     </div>
   </section><!-- End Hero -->
@@ -236,26 +235,33 @@
     <section id="about" class="about">
 
       <!-- ======= ABOUT container for larger screens ======= -->
-      <div class="container d-none d-lg-block" data-aos="fade-up" data-aos-delay="100">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="section-title">
           <h2>About</h2>
+          <div class="social-links">
+            <a href="https://www.instagram.com/buksters/" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+            <a href="https://github.com/buksters" class="github" target="_blank"><i class="bx bxl-github"></i></a>
+            <a href="https://linkedin.com/in/ibuki-iwasaki
+            " class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+            <a href="mailto:ibukiwasaki@gmail.com"><i class="bx bx-envelope"></i></a>
+          </div>
           <p>Hello! I'm Ibuki, a Japanese-American designer-maker-researcher who uses a lot of hyphens when describing myself because I dwell in a lot of intersections. These days I enjoy exploring and experimenting in the intersection of design, technology, and behavior.</p>
           <img src="assets/img/pond.JPG" class="img-fluid" alt="" height="700" width="700">
         </div>
       </div> 
 
-      <div class="container d-lg-none" data-aos="fade-up">
-        <!-- ======= ABOUT container for smaller screens ======= -->
+      <!-- ======= ABOUT container for smaller screens ======= -->
+      <!-- <div class="container d-lg-none" data-aos="fade-up">
         <div class="section-title">
           <h2>About</h2>
           <p>Hello! I'm Ibuki, a Japanese-American designer-maker-researcher who uses a lot of hyphens when describing myself because I dwell in a lot of intersections. These days I enjoy exploring and experimenting in the intersection of design, technology, and behavior.</p>
           <br>
-          <!-- <p>(For a more fun experience, check out this page on desktop :) )</p> -->
           <img src="assets/img/pond.JPG" class="img-fluid" alt="">
-          <!-- <p>I did my undergrad at MIT where I double majored in Art &amp Design and Computation &amp Cognition.</p> -->
         </div>
-      </div>
-    </section><!-- End About Section -->
+      </div> -->
+    </section>
+    
+    <!-- End About Section -->
 
     <!-- ======= Resume Section ======= -->
     <section id="resume" class="resume">
@@ -400,7 +406,10 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> -->
+  <script src="assets/js/jquery-3.6.4.min.js"></script>
   <script src="assets/js/main.js"></script>
+  
 
 </body>
 

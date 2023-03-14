@@ -71,9 +71,114 @@
    */
   const flipcorner = () => {
     let pagecorner = select('.page-corner-up');
-    pagecorner.classList.add("page-corner-down");
+    console.log("class list: ", pagecorner.classList)
+    if (pagecorner.classList.contains("page-corner-down")) {
+      pagecorner.classList.remove("page-corner-down");
+      // setTimeout(function(){pagecorner.classList.add("page-corner-down");}, 800)
+      
+    }
+    else pagecorner.classList.add("page-corner-down");
   }
-  window.addEventListener('load', flipcorner)
+  window.addEventListener('load', flipcorner);
+
+
+  /**
+   * Customize color of page
+   */
+
+  function rgbtohex(rgb_input) {
+    //ex. input: rgb(100, 100, 100) -> output: [100,100,100]
+    let rgb_vals = rgb_input.slice(4, -1);
+    let rgb_nospace = rgb_vals.replace(/ /g, "");
+    let separated = rgb_nospace.split(",");
+
+    var r, g, b;
+    r = parseInt(separated[0]);
+    g = parseInt(separated[1]);
+    b = parseInt(separated[2]);
+
+    //for converting each component value
+    function componentToHex(c) {
+      var hex = c.toString(16);
+      return hex.length == 1 ? "0" + hex : hex;
+    }
+
+    //joins components together
+    function makeHex(r, g, b) {
+      return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+    }
+
+    return makeHex(r, g, b);
+    
+  }
+
+  //uses hex values, returns new color
+  function LightenDarkenColor(col, amt) {
+  
+    var usePound = false;
+  
+    if (col[0] == "#") {
+        col = col.slice(1);
+        usePound = true;
+    }
+ 
+    var num = parseInt(col,16);
+ 
+    var r = (num >> 16) + amt;
+ 
+    if (r > 255) r = 255;
+    else if  (r < 0) r = 0;
+ 
+    var b = ((num >> 8) & 0x00FF) + amt;
+ 
+    if (b > 255) b = 255;
+    else if  (b < 0) b = 0;
+ 
+    var g = (num & 0x0000FF) + amt;
+ 
+    if (g > 255) g = 255;
+    else if (g < 0) g = 0;
+ 
+    return (usePound?"#":"") + (g | (b << 8) | (r << 16)).toString(16);
+  
+}
+  
+
+  let colorPicker = select('.color-picker');
+  if (colorPicker) {
+
+    on('click', '.color-picker button', function(e) {
+      var selectColorRGB = $(this).css("background-color");
+      var selectColorhex = rgbtohex(selectColorRGB);
+      var darkerColor = LightenDarkenColor(selectColorhex, -50);
+      var lighterColor = LightenDarkenColor(selectColorhex,70)
+
+      let pagecorner = select('.page-corner-up');
+      pagecorner.classList.remove("page-corner-down");
+      
+      setTimeout(function(){
+        pagecorner.classList.add("page-corner-down"); 
+        $(document.documentElement).css("--lighter-color", lighterColor);
+        $(document.documentElement).css("--main-color", selectColorhex);
+        $(document.documentElement).css("--accent-color", darkerColor);}, 850)
+        
+
+      
+      console.log($(this).css("border"));
+      // flipcorner();
+
+    }, true)
+
+    
+    // $(".color-picker").children().each(function() {
+    //   var selectColorRGB = $(this).css("background-color");
+    //   var selectColorhex = rgbtohex(selectColorRGB);
+    //   var darkerColor = LightenDarkenColor(selectColorhex, -20);
+    //   var lighterColor = LightenDarkenColor(selectColorhex, 20)
+      // $(this).css("background-color", lighterColor);
+    // })
+
+  }
 
   /**
    * Scrolls to an element with header offset
