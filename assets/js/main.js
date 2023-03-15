@@ -232,6 +232,9 @@
             if (item.startsWith('col-xl-')) {
               toggler = item   
             }
+            else if (item.startsWith('col-lg-')) {
+              toggler = item   
+            }
           }
           )
         }
