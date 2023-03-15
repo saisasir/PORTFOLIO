@@ -14,7 +14,7 @@
   --main-color: #c087bd;
   /* --accent-color: rgb(159,118,156); */
   --accent-color: #956292;
-  --lighter-color: #ffdaff;
+  --lighter-color: #ffcdff;
   --main-font: "M Plus Rounded 1c", sans-serif;
   --accent-font: "Poppins", sans-serif;
 }
@@ -759,16 +759,21 @@ section {
   display:inline-block;
 }
 
+.skill-line {
+  align-items: top;
+  display:inline-flex;
+  margin-bottom: 5px;
+}
+
 .skills .skills-bullets {
-  margin-top: 20px;
-  position: relative;
-  text-align: left;
-  flex-direction: column;
-  align-items: center;
+  display: inline-block;
+  min-width: 110px;
+  align-items: top;
+  
 }
 
 .skills .skills-bullets .bullet{
-  display: inline-flex;
+  display: inline-block;
   align-items: center;
   width: 14px;
   height: 14px;
@@ -778,12 +783,15 @@ section {
   border: 1px solid var(--main-color);
 }
 
-.skills .skills-bullets p{
-  position: absolute;
-  left: 150px;
+.skills .skill-line p{
+  position: relative;
+  display: inline-block;
+  left: 0px;
+  max-width:600px;
+  /* width: -moz-fit-content;
+  width: fit-content; */
+  top: 0px;
   font-size: 14px;
-  display: inline-flex;
-  align-items: center;
 }
 
 .skills .skills-bullets .bullet-active {
