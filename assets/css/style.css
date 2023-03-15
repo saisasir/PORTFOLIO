@@ -390,6 +390,7 @@ h6 {
   /* border: solid 1px;
   border-left-color: #148af9; */
   /* outline: rgb(117, 117, 117) solid .5px; */
+  box-sizing: border-box;
   display: inline-block;
   border-radius: 50%;
   color: var(--site-color);
