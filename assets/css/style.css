@@ -385,6 +385,7 @@ h6 {
 
 #hero .color-picker button {
   border:none;
+  outline: none;
   /* border: 2px outset #00000089; */
   /* border: solid 1px;
   border-left-color: #148af9; */
@@ -399,23 +400,22 @@ h6 {
   transition: transform 0.3s;
   /* box-shadow: 0 0 14px 3px #000000; */
   box-shadow: 1px 3px 4px 2px #000000;
-  outline: #00000089 solid 1px;
+  border: #00000089 solid 1px;
 }
 
-#hero .color-picker button:hover {
-  transform: scale(1.01) translate(-1px, -1px);
+#hero .color-picker button:hover{
+  border: #00000089 solid 2px;
+  box-shadow: 1px 1px 2px 1px #000000;
 }
 
 
 #hero .color-picker button:focus {
   outline: none;
   border: none;
-  outline: #00000089 solid 2px;
-  /* border: 2px inset rgba(163, 163, 163, 0.646); */
-  box-shadow: inset 4px 4px 3px #00000089;
-  /* box-shadow: ; */
+  border: #00000089 solid 3.5px;
+  box-shadow: inset 3px 3px 3px #00000089;
   /* transform: translate(1px, 1px); */
-  transform: scale(.98) translate(2px, 2px);
+  transform: scale(1.1);
 }
 
 #color-1 {
