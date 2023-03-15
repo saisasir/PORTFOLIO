@@ -396,6 +396,7 @@ h6 {
   color: var(--site-color);
   width: 30px;
   height: 30px;
+  padding: 0;
   /* outline: #00000089 solid 1px; */
   margin-right: 20px;
   transition: transform 0.3s;
@@ -516,7 +517,7 @@ section {
   display: block;
   width: 40px;
   height: 3px;
-  background: #949494;
+  background: #aeaeae;
   bottom: 0;
   left: calc(50% - 20px);
 }
