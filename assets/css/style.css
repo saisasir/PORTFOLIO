@@ -385,7 +385,7 @@ h6 {
 
 #hero .color-picker button {
   border:none;
-  /* border: 2px outset rgba(163, 163, 163, 0.646); */
+  /* border: 2px outset #00000089; */
   /* border: solid 1px;
   border-left-color: #148af9; */
   /* outline: rgb(117, 117, 117) solid .5px; */
@@ -394,21 +394,29 @@ h6 {
   color: var(--site-color);
   width: 30px;
   height: 30px;
-  /* outline: black solid 1px; */
+  /* outline: #00000089 solid 1px; */
   margin-right: 20px;
-  transition: 0.3s;
-  box-shadow: 0 0 14px 3px #000000;
+  transition: transform 0.3s;
+  /* box-shadow: 0 0 14px 3px #000000; */
+  box-shadow: 1px 3px 4px 2px #000000;
+  outline: #00000089 solid 1px;
 }
+
+#hero .color-picker button:hover {
+  transform: scale(1.01) translate(-1px, -1px);
+}
+
 
 #hero .color-picker button:focus {
   outline: none;
-  /* outline: rgb(117, 117, 117) solid .5px; */
+  border: none;
+  outline: #00000089 solid 2px;
   /* border: 2px inset rgba(163, 163, 163, 0.646); */
-  box-shadow: 0 0 7px #000000;
-  transform: translate(1px, 1px) scale(0.98);
-
+  box-shadow: inset 4px 4px 3px #00000089;
+  /* box-shadow: ; */
+  /* transform: translate(1px, 1px); */
+  transform: scale(.98) translate(2px, 2px);
 }
-
 
 #color-1 {
   background-color: #c794c4;

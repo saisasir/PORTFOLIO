@@ -147,6 +147,7 @@
   let colorPicker = select('.color-picker');
   if (colorPicker) {
 
+    //for each color button, reads its color and sets it as document color
     on('click', '.color-picker button', function(e) {
       var selectColorRGB = $(this).css("background-color");
       var selectColorhex = rgbtohex(selectColorRGB);
@@ -156,6 +157,10 @@
       let pagecorner = select('.page-corner-up');
       pagecorner.classList.remove("page-corner-down");
       
+      if (document.activeElement != this) {
+        this.focus();
+      };
+
       setTimeout(function(){
         pagecorner.classList.add("page-corner-down"); 
         $(document.documentElement).css("--lighter-color", lighterColor);
@@ -164,14 +169,6 @@
 
     }, true)
 
-    
-    // $(".color-picker").children().each(function() {
-    //   var selectColorRGB = $(this).css("background-color");
-    //   var selectColorhex = rgbtohex(selectColorRGB);
-    //   var darkerColor = LightenDarkenColor(selectColorhex, -20);
-    //   var lighterColor = LightenDarkenColor(selectColorhex, 20)
-      // $(this).css("background-color", lighterColor);
-    // })
 
   }
 
