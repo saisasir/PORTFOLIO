@@ -11,7 +11,7 @@
 --------------------------------------------------------------*/
 :root {
   /* --main-color: rgb(199,148,196); */
-  --main-color: #c794c4;
+  --main-color: #c087bd;
   /* --accent-color: rgb(159,118,156); */
   --accent-color: #956292;
   --lighter-color: #ffdaff;
@@ -421,13 +421,13 @@ h6 {
 }
 
 #color-1 {
-  background-color: #c794c4;
+  background-color: #c087bd;
   /* background-color: rgb(199,148,196); */
   
 }
 #color-2 {
   /* background-color: rgb(133,176,154); */
-  background-color: #85b09a;
+  background-color: #669c80;
 }
 #color-3 {
   /* background-color: rgb(3,152,158); */
