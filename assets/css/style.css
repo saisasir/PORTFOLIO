@@ -401,15 +401,16 @@ h6 {
   padding: 0;
   /* outline: #00000089 solid 1px; */
   margin-right: 20px;
-  transition: transform 0.3s;
+  transition: transform 0.15s, box-shadow 0.15s;
   /* box-shadow: 0 0 14px 3px #000000; */
-  box-shadow: 1px 3px 4px 2px #000000;
+  box-shadow: 1px 3px 4px 2px #000000, inset 1.5px 2px 2px #d4d4d4;
   border: #00000089 solid 1px;
 }
 
 #hero .color-picker button:hover{
   border: #00000089 solid 2px;
-  box-shadow: 1px 1px 2px 1px #000000;
+  transform: translate(.5px, .5px);
+  box-shadow: .5px 1px 2px 1px #000000;
 }
 
 
