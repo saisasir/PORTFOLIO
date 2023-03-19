@@ -65,7 +65,40 @@
   }
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
-  
+
+  const tester = select(".tester");
+  var blurb_end = false;
+  var blurb_deleted = false;
+
+  const hero_text = select("#hero p");
+
+  /**
+   * Hero type effect
+   */
+  const typed = select('.typed')
+  if (typed) {
+    let typed_strings = typed.getAttribute('data-typed-items')
+    typed_strings = typed_strings.split(',')
+    var blurb = new Typed('.typed', {
+      strings: typed_strings,
+      loop: true,
+      typeSpeed: 50,
+      backSpeed: 50,
+      backDelay: 2000,
+      onComplete: function(self) { blurb_end = true;
+      blurb.stop();
+
+      },
+      onLastStringBackspaced: (self) => {blurb_deleted=true;},
+      
+    });
+  }
+
+
+  setInterval(()=>{
+    tester.innerText = blurb_end;
+    }, 50);
+
   /**
    * Page corner flip effect
    */
@@ -154,22 +187,43 @@
       var darkerColor = LightenDarkenColor(selectColorhex, -50);
       var lighterColor = LightenDarkenColor(selectColorhex,70)
 
+      var buttonNum = this.id;
+
       let pagecorner = select('.page-corner-up');
+
+      
+      
+      // tester.innerText = typed.getAttribute('data-typed-items');
+
+      
+
+
+
       pagecorner.classList.remove("page-corner-down");
       
       if (document.activeElement != this) {
         this.focus();
       };
 
-      setTimeout(function(){
+      setTimeout(function(self){
         pagecorner.classList.add("page-corner-down"); 
+        if (buttonNum == 'color-1') {
+          hero_text.innerText = "Welcome to my corner of the internet."
+        }
+        else if (buttonNum == 'color-2') {
+          hero_text.innerText = "I'm a designer and maker who codes.";
+        }
+        else if (buttonNum == 'color-3') {
+          hero_text.innerText = "My work is a mix of digital and physical projects.";
+        }
+        else if (buttonNum == 'color-4') {
+          hero_text.innerText = "My goal is to design meaningful and memorable interactions.";
+        }
         $(document.documentElement).css("--lighter-color", lighterColor);
         $(document.documentElement).css("--main-color", selectColorhex);
         $(document.documentElement).css("--accent-color", darkerColor);}, 850)
 
     }, true)
-
-
   }
 
   /**
@@ -302,22 +356,6 @@
   if (preloader) {
     window.addEventListener('load', () => {
       preloader.remove()
-    });
-  }
-
-  /**
-   * Hero type effect
-   */
-  const typed = select('.typed')
-  if (typed) {
-    let typed_strings = typed.getAttribute('data-typed-items')
-    typed_strings = typed_strings.split(',')
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
     });
   }
 

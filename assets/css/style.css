@@ -6,6 +6,16 @@
 */
 
 
+.tester {
+  display: block;
+  position: fixed;
+  bottom: 10px;
+  left: 50px;
+  font-size: 16px;
+  z-index: 50;
+
+}
+
 /*--------------------------------------------------------------
 # variables
 --------------------------------------------------------------*/
@@ -368,7 +378,7 @@ h6 {
   text-shadow: var(--accent-color) 2px 2px;
 }
 
-#hero p {
+#hero p, #hero span {
   /* color: #45505b; */
   color: var(--accent-color);
   margin: 15px 0 0 0;
