@@ -214,7 +214,7 @@
           hero_text.innerText = "I'm a designer and maker who codes.";
         }
         else if (buttonNum == 'color-3') {
-          hero_text.innerText = "My work is a mix of digital and physical projects.";
+          hero_text.innerText = "My work is a blend of digital and physical.";
         }
         else if (buttonNum == 'color-4') {
           hero_text.innerText = "My goal is to design meaningful and memorable interactions.";
