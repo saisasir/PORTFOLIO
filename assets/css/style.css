@@ -606,8 +606,10 @@ section {
   transition: 0.3s;
 }
 
+.about .social-links a:last-child {margin-right: 0px;}
+
 .about .social-links a:hover {
-  color: var(--accent-color);
+  color: var(--main-color);
 }
 
 @media (min-width: 992px) {
@@ -893,6 +895,28 @@ section {
   top: 0;
   background: #fff;
   border: 2px solid var(--main-color);
+}
+
+.resume .social-links {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.resume .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  color: #45505b;
+  line-height: 1;
+  margin-right: 20px;
+  transition: 0.3s;
+  border-right: var(--main-color) solid 2px;
+  padding-right: 23px;
+}
+
+.resume .social-links a:last-child {margin-right: 0px;}
+
+.resume .social-links a:hover {
+  color: var(--main-color);
 }
 
 /*--------------------------------------------------------------
