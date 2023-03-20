@@ -460,6 +460,11 @@ h6 {
     text-align: center;
   }
 
+  #hero .container {
+    position: absolute;
+    height: 80px;
+  }
+
   #hero h1 {
     font-size: 32px;
     line-height: 36px;
@@ -469,6 +474,15 @@ h6 {
     margin-top: 10px;
     font-size: 20px;
     line-height: 24px;
+  }
+
+  #hero .color-picker {
+    position: absolute;
+    display: block;
+    margin-top: 0;
+    left: 50%;
+    top: 170px;
+    transform: translate(-50%,0%);
   }
 }
 

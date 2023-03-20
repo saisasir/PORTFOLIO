@@ -81,8 +81,8 @@
     var blurb = new Typed('.typed', {
       strings: typed_strings,
       loop: true,
-      typeSpeed: 40,
-      backSpeed: 20,
+      typeSpeed: 35,
+      backSpeed: 15,
       backDelay: 1000,
       onComplete: function(self) { blurb.stop(); blurb_end = true;
 
@@ -179,7 +179,7 @@
       var lighterColor = LightenDarkenColor(selectColorhex,70)
 
       var buttonNum = this.id;
-      var pageChangeDelay = 1000;
+      var pageChangeDelay = 900;
       let pagecorner = select('.page-corner-up');
 
       let text_1 = "Welcome to my corner of the internet.",
@@ -188,7 +188,7 @@
       text_4 = "My goal is to design meaningful and memorable interactions.";
 
       //since it's longer than the others:
-      if (blurb.pause.curString === text_4) {pageChangeDelay=1500}
+      if (blurb.pause.curString === text_4) {pageChangeDelay=1400}
       blurb_end = false;
 
       //changes the blurb text
