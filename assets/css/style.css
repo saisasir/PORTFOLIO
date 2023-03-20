@@ -991,7 +991,7 @@ section {
 .portfolio #portfolio-flters li {
   cursor: pointer;
   display: inline-block;
-  padding: 10px 15px;
+  padding: 10px 20px;
   font-size: 14px;
   font-weight: 600;
   line-height: 1;
@@ -1006,8 +1006,11 @@ section {
   color: var(--main-color);
 }
 
+.portfolio #portfolio-flters li:first-child {
+  padding-left: 30px;
+}
 .portfolio #portfolio-flters li:last-child {
-  margin-right: 0;
+  padding-right: 0px;
 }
 
 .portfolio .hover-area {
