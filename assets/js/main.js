@@ -68,7 +68,6 @@
 
   const tester = select(".tester");
   var blurb_end = false;
-  var blurb_deleted = false;
 
   const hero_text = select("#hero p");
 
@@ -85,20 +84,12 @@
       typeSpeed: 40,
       backSpeed: 20,
       backDelay: 1000,
-      // attr: "Testtesttest",
       onComplete: function(self) { blurb.stop(); blurb_end = true;
 
       },      
     });
   }
 
-// if (tester) 
-//   {setInterval(()=>{
-//     tester.innerText = blurb_end;
-//     if(blurb_end === true){
-//       blurb.stop();
-//     }
-//     }, 25)};
 
   /**
    * Page corner flip effect
@@ -108,7 +99,6 @@
     console.log("class list: ", pagecorner.classList)
     if (pagecorner.classList.contains("page-corner-down")) {
       pagecorner.classList.remove("page-corner-down");
-      // setTimeout(function(){pagecorner.classList.add("page-corner-down");}, 800)
       
     }
     else pagecorner.classList.add("page-corner-down");
@@ -192,37 +182,39 @@
       var pageChangeDelay = 1000;
       let pagecorner = select('.page-corner-up');
 
-      
-      blurb_end = false;
-      // tester.innerText = blurb.strings;
+      let text_1 = "Welcome to my corner of the internet.",
+      text_2 = "I'm a designer and maker who codes.",
+      text_3 = "My work is a blend of digital and physical.",
+      text_4 = "My goal is to design meaningful and memorable interactions.";
 
+      //since it's longer than the others:
+      if (blurb.pause.curString === text_4) {pageChangeDelay=1500}
+      blurb_end = false;
+
+      //changes the blurb text
       if (buttonNum == 'color-1') {
-        // hero_text.innerText = "Welcome to my corner of the internet."
-        blurb.deleteandreplace("Welcome to my corner of the internet.");
+        blurb.deleteandreplace(text_1);
       }
       else if (buttonNum == 'color-2') {
-        // hero_text.innerText = "I'm a designer and maker who codes.";
-        blurb.deleteandreplace("I'm a designer and maker who codes.");
+        blurb.deleteandreplace(text_2);
 
       }
       else if (buttonNum == 'color-3') {
-        // hero_text.innerText = "My work is a blend of digital and physical.";
-        blurb.deleteandreplace("My work is a blend of digital and physical.");
+        blurb.deleteandreplace(text_3);
 
       }
       else if (buttonNum == 'color-4') {
-        // hero_text.innerText = "My goal is to design meaningful and memorable interactions.";
-        blurb.deleteandreplace("My goal is to design meaningful and memorable interactions.");
-
+        blurb.deleteandreplace(text_4);
       }
 
-
+      //lifts up the page corner
       pagecorner.classList.remove("page-corner-down");
       
       if (document.activeElement != this) {
         this.focus();
       };
 
+      //timeout set so that page corner is lifted before changes take place
       setTimeout(function(self){
         pagecorner.classList.add("page-corner-down"); 
         
