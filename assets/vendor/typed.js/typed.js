@@ -138,6 +138,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	
 	    /**
+	     * Set replacement text
+	     * @public
+	     */
+	  }, {
+		key: 'deleteandreplace',
+		value: function deleteandreplace(newString) {
+			
+			self.replacementText = newString;
+			this.replacementText = newString;
+			// this.pause.status = false;
+			// this.backspace(this.pause.curString, this.pause.curStrPos);
+			this.start();
+		}
+
+		/**
 	     * Destroy this instance of Typed
 	     * @public
 	     */
@@ -330,9 +345,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	          return;
 	        }
 	      }
-	      this.timeout = setTimeout(function () {
-	        _this3.backspace(curString, curStrPos);
-	      }, this.backDelay);
+		  if(!this.pause.status){
+			this.timeout = setTimeout(function () {
+				_this3.backspace(curString, curStrPos);
+			}, this.backDelay);
+			}
+			else {
+				this.backspacePaused = true;
+				this.setPauseStatus(curString, curStrPos, false)
+			}
 	    }
 	
 	    /**
@@ -380,6 +401,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	          // loop the function
 	          _this4.backspace(curString, curStrPos);
 	        } else if (curStrPos <= _this4.stopNum) {
+				if (this.replacementText) {
+					_this4.updateText();
+					return;
+				}
 	          // if the stop number has been reached, increase
 	          // array position to next string
 	          _this4.arrayPos++;
@@ -396,6 +421,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	        // humanized value for typing
 	      }, humanize);
 	    }
+
+		 /**
+	     * Replacing text and starting
+	     * @private
+	     */
+		}, {
+			key: 'updateText',
+			value: function updateText() {
+			 if(!this.replacementText) {
+				return;
+			 }
+			 this.reset(false);
+			 this.insertCursor();
+			 this.typewrite(this.replacementText, 0);
+			//  
+			//  this.start();
+			 
+
+			}
 	
 	    /**
 	     * Full animation is complete
@@ -614,6 +658,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	
 	      self.options = _extends({}, _defaultsJs2['default'], options);
+
+		  // text for delete and replace
+		  self.replacementText = self.options.replacementText;
+
+		  // if text has been paused before being backspaced
+		  self.backspacePaused = false;
 	
 	      // attribute to type into
 	      self.isInput = self.el.tagName.toLowerCase() === 'input';
@@ -827,6 +877,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @property {boolean} shuffle shuffle the strings
 	   */
 	  shuffle: false,
+
+	  /**
+	   * @property {string} replacementText text to be changed to
+	   */
+	  replacementText: null,
 	
 	  /**
 	   * @property {number} backDelay time before backspacing in milliseconds

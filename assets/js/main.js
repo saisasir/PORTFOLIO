@@ -82,22 +82,23 @@
     var blurb = new Typed('.typed', {
       strings: typed_strings,
       loop: true,
-      typeSpeed: 50,
-      backSpeed: 50,
-      backDelay: 2000,
-      onComplete: function(self) { blurb_end = true;
-      blurb.stop();
+      typeSpeed: 40,
+      backSpeed: 20,
+      backDelay: 1000,
+      // attr: "Testtesttest",
+      onComplete: function(self) { blurb.stop(); blurb_end = true;
 
-      },
-      onLastStringBackspaced: (self) => {blurb_deleted=true;},
-      
+      },      
     });
   }
 
-
-  setInterval(()=>{
-    tester.innerText = blurb_end;
-    }, 50);
+// if (tester) 
+//   {setInterval(()=>{
+//     tester.innerText = blurb_end;
+//     if(blurb_end === true){
+//       blurb.stop();
+//     }
+//     }, 25)};
 
   /**
    * Page corner flip effect
@@ -188,15 +189,32 @@
       var lighterColor = LightenDarkenColor(selectColorhex,70)
 
       var buttonNum = this.id;
-
+      var pageChangeDelay = 1000;
       let pagecorner = select('.page-corner-up');
 
       
-      
-      // tester.innerText = typed.getAttribute('data-typed-items');
+      blurb_end = false;
+      // tester.innerText = blurb.strings;
 
-      
+      if (buttonNum == 'color-1') {
+        // hero_text.innerText = "Welcome to my corner of the internet."
+        blurb.deleteandreplace("Welcome to my corner of the internet.");
+      }
+      else if (buttonNum == 'color-2') {
+        // hero_text.innerText = "I'm a designer and maker who codes.";
+        blurb.deleteandreplace("I'm a designer and maker who codes.");
 
+      }
+      else if (buttonNum == 'color-3') {
+        // hero_text.innerText = "My work is a blend of digital and physical.";
+        blurb.deleteandreplace("My work is a blend of digital and physical.");
+
+      }
+      else if (buttonNum == 'color-4') {
+        // hero_text.innerText = "My goal is to design meaningful and memorable interactions.";
+        blurb.deleteandreplace("My goal is to design meaningful and memorable interactions.");
+
+      }
 
 
       pagecorner.classList.remove("page-corner-down");
@@ -207,21 +225,10 @@
 
       setTimeout(function(self){
         pagecorner.classList.add("page-corner-down"); 
-        if (buttonNum == 'color-1') {
-          hero_text.innerText = "Welcome to my corner of the internet."
-        }
-        else if (buttonNum == 'color-2') {
-          hero_text.innerText = "I'm a designer and maker who codes.";
-        }
-        else if (buttonNum == 'color-3') {
-          hero_text.innerText = "My work is a blend of digital and physical.";
-        }
-        else if (buttonNum == 'color-4') {
-          hero_text.innerText = "My goal is to design meaningful and memorable interactions.";
-        }
+        
         $(document.documentElement).css("--lighter-color", lighterColor);
         $(document.documentElement).css("--main-color", selectColorhex);
-        $(document.documentElement).css("--accent-color", darkerColor);}, 850)
+        $(document.documentElement).css("--accent-color", darkerColor);}, pageChangeDelay)
 
     }, true)
   }
