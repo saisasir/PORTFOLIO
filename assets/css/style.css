@@ -1517,6 +1517,18 @@ section {
   text-align:left;
 }
 
+.project .image-caption {
+    display: block;
+    margin-left: auto;
+    font-size: 12px;
+    margin-right: auto;
+    max-width: 85%;
+    /* border: black solid; */
+    text-align: center;
+    margin-top: 5px;
+    color: rgb(130, 130, 130);
+}
+
 .project .caption {
   
   display: block;
