@@ -660,7 +660,7 @@ section {
 .swiper-slide {
   display: flex;
   border-radius: 18px;
-  background-color: var(--main-color);
+  background-color: var(--accent-color);
   justify-content: center;
 }
 
@@ -668,8 +668,8 @@ section {
   display: block;
   margin: auto;
   border-radius: 18px;
-  height: 98%;
-  width: 98%;
+  height: 98.5%;
+  width: 98.5%;
   object-fit: cover;
 }
 

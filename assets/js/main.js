@@ -183,7 +183,7 @@
       let pagecorner = select('.page-corner-up');
 
       let text_1 = "Welcome to my corner of the internet.",
-      text_2 = "I'm a designer and maker who codes.",
+      text_2 = "I'm a designer, maker, and researcher who codes.",
       text_3 = "My work is a blend of digital and physical.",
       text_4 = "My goal is to design meaningful and memorable interactions.";
 
