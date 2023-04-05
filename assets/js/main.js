@@ -406,16 +406,25 @@
       });
 
       let portfolioFilters = select('#portfolio-flters li', true);
+      let activeFilters = [];
 
       on('click', '#portfolio-flters li', function(e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
-          el.classList.remove('filter-active');
-        });
-        this.classList.add('filter-active');
+        var filterValue = this.getAttribute('data-filter');
+        // portfolioFilters.forEach(function(el) {
+        //   el.classList.remove('filter-active');
+        // });
+        if(this.classList.contains('filter-active')){
+          this.classList.remove('filter-active')
+          activeFilters = activeFilters.filter(function(e) { return e !== filterValue })
+        }
+        else {
+          this.classList.add('filter-active')
+          activeFilters.push(filterValue)
+        }
 
         portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
+          filter: activeFilters.join()
         });
         portfolioIsotope.on('arrangeComplete', function() {
           AOS.refresh()
