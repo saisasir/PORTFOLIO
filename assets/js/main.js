@@ -467,6 +467,18 @@
     }
   });
 
+  new Swiper('.about-pictures', {
+    speed: 400,
+    loop: true,
+    effect: "cards",
+    grabCursor: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    }
+  });
+
   /**
    * Testimonials slider
    */
