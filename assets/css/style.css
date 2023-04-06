@@ -619,9 +619,9 @@ section {
   z-index: 50;
 }
 .swiper-pagination-bullet {
-  outline: white solid .75px;
+  border: rgb(108, 108, 108) solid 1px;
   opacity: 1;
-  background-color: rgb(207, 207, 207);
+  background-color: rgb(220, 220, 220);
 }
 
 .swiper-pagination-bullet-active {
