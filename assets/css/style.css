@@ -716,85 +716,6 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Skills
---------------------------------------------------------------*/
-.skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
-}
-
-.skills .progress .skill {
-  padding: 10px 0;
-  margin: 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: var(--accent-font);
-  color: #45505b;
-}
-
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
-}
-
-.skills .progress-bar-wrap {
-  background: #f2f3f5;
-}
-
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: var(--main-color);
-}
-
-.skills li {
-  display:inline-block;
-}
-
-.skill-line {
-  align-items: top;
-  display:inline-flex;
-  margin-bottom: 5px;
-}
-
-.skills .skills-bullets {
-  display: inline-block;
-  min-width: 110px;
-  align-items: top;
-  
-}
-
-.skills .skills-bullets .bullet{
-  display: inline-block;
-  align-items: center;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: var(--main-color);
-  opacity: 1;
-  border: 1px solid var(--main-color);
-}
-
-.skills .skill-line p{
-  position: relative;
-  display: inline-block;
-  left: 0px;
-  max-width:600px;
-  /* width: -moz-fit-content;
-  width: fit-content; */
-  top: 0px;
-  font-size: 14px;
-}
-
-.skills .skills-bullets .bullet-active {
-  background-color: var(--main-color);
-}
-
-/*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
 .resume .resume-title {
@@ -806,7 +727,7 @@ section {
 }
 
 .resume .resume-item {
-  padding: 0 0 20px 20px;
+  padding: 0 0 15px 20px;
   margin-top: -2px;
   border-left: 2px solid var(--main-color);
   position: relative;
@@ -814,6 +735,11 @@ section {
 
 .resume .work-list .resume-item {
   margin-bottom: -25px;
+}
+
+.resume #note{
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 .resume .resume-item h4 {
@@ -888,6 +814,58 @@ section {
 
 .resume .social-links a:hover {
   color: var(--main-color);
+}
+
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+.skills li {
+  display:inline-block;
+}
+
+.skill-line {
+  align-items: top;
+  display:inline-block;
+}
+
+
+.skills .skills-bullets {
+  display: inline-block;
+  min-width: 110px;
+  align-items: top;
+  
+}
+
+.skills .skills-bullets .bullet{
+  display: inline-block;
+  align-items: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  opacity: 1;
+  border: 1px solid var(--main-color);
+}
+
+.skills .skill-line p{
+  position: relative;
+  display: inline-block;
+  left: 0px;
+  /* max-width:600px; */
+  /* width: -moz-fit-content;
+  width: fit-content; */
+  top: 0px;
+  /* font-size: 14px; */
+}
+
+.skills .skills-bullets .bullet-active {
+  background-color: var(--main-color);
+}
+
+.resume .resume-item .skills h4 {
+  /* font-size: 18px; */
+  margin-bottom: 5px;
+  line-height: 25px;
 }
 
 /*--------------------------------------------------------------
