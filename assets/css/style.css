@@ -1095,6 +1095,7 @@ section {
   padding-left: 30px;
   padding-right: 30px;
   margin: 0;
+  max-width: 80%;
 }
 
 .portfolio .portfolio-wrap .portfolio-links {
