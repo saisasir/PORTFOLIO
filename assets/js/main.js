@@ -183,9 +183,9 @@
       let pagecorner = select('.page-corner-up');
 
       let text_1 = "Welcome to my corner of the internet.",
-      text_2 = "I'm a designer, maker, and researcher who codes.",
+      text_2 = "I'm a designer, developer, and researcher.",
       text_3 = "My work is a blend of digital and physical.",
-      text_4 = "My goal is to design meaningful and memorable interactions.";
+      text_4 = "I'm happiest when creating meaningful and delightful interactions.";
 
       //since it's longer than the others:
       if (blurb.pause.curString === text_4) {pageChangeDelay=1400}
