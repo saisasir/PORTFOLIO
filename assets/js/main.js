@@ -81,8 +81,8 @@
     var blurb = new Typed('.typed', {
       strings: typed_strings,
       loop: true,
-      typeSpeed: 35,
-      backSpeed: 15,
+      typeSpeed: 30,
+      backSpeed: 10,
       backDelay: 1000,
       onComplete: function(self) { blurb.stop(); blurb_end = true;
 
