@@ -63,7 +63,7 @@
     <nav id="navbar" class="navbar nav-menu">
       <ul>
         <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-library"></i> <span>Portfolio</span></a></li> 
+        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-library"></i> <span>Projects</span></a></li> 
         <li><a href="#about" class="nav-link scrollto"><i class="bx bx-meh-blank"></i> <span>About</span></a></li>
         <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file"></i> <span>Resume</span></a></li>
         <!-- <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope-open"></i> <span>Contact</span></a></li> -->
@@ -97,16 +97,18 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="section-title">
-          <h2>Portfolio</h2>
+          <h2>Projects</h2>
           <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
 
           <div class="row">
             <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
               <ul id="portfolio-flters">
                 <!-- <li data-filter="*" class="filter-active">All</li> -->
-                <li data-filter=".filter-fe">front end</li>
-                <li data-filter=".filter-arduino">arduino</li>
-                <li data-filter=".filter-uiux">UI/UX</li>
+                <li data-filter=".filter-uxui">ux/ui design</li>
+                <li data-filter=".filter-research">research</li>
+                <li data-filter=".filter-webdev">web dev</li>
+                <li data-filter=".filter-installation">installation</li>
+                <li data-filter=".filter-experiment">experiment</li>
                 <li data-filter=".filter-misc">misc</li>
               </ul>
             </div>
@@ -117,10 +119,10 @@
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
           <!-- ======= MARU BLOG ======= -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-uiux filter-fe">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-uxui filter-webdev">
             <ul id="portfolio-tags">
-              <li>front end</li>
-              <li>ui/ux</li>
+              <li>web dev</li>
+              <li>ux/ui design</li>
             </ul>
             <a href="projects/maru.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
               <div class="portfolio-wrap">
@@ -134,10 +136,47 @@
               
           </div>
 
-          <!-- ======= CRITTER ======= -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-arduino">
+          <!-- ======= GLOW ======= -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-uxui filter-research">
             <ul id="portfolio-tags">
-              <li>arduino</li>
+              <li>ux/ui design</li>
+              <li>research</li>
+            </ul>
+            <a href="projects/glow.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
+              <div class="portfolio-wrap">
+                <img src="assets/img/design_projects/glow/glow screen gif.gif" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>glow</h4>
+                  <p>A reimagined livestreaming platform.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- ======= MITBOOK ======= -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-uxui filter-research">
+            <ul id="portfolio-tags">
+              <li>ux/ui design</li>
+              <li>research</li>
+            </ul>
+            <a href="projects/book.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
+              <div class="portfolio-wrap">
+                <img src="assets/img/design_projects/mitbook/loading.gif" class="img-fluid" alt="">
+                <div class="static-img">
+                  <img src="assets/img/design_projects/mitbook/Google Pixel 3 Mockup.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="portfolio-info">
+                  <h4>book</h4>
+                  <p>A booking system for a library's workspaces.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- ======= CRITTER ======= -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-installation">
+            <ul id="portfolio-tags">
+              <li>installation</li>
             </ul>
             <a href="projects/critter.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
               <div class="portfolio-wrap">
@@ -148,22 +187,6 @@
                 <div class="portfolio-info">
                   <h4>critter</h4>
                   <p>A self-preserving object.</p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- ======= GLOW ======= -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-uiux">
-            <ul id="portfolio-tags">
-              <li>ui/ux</li>
-            </ul>
-            <a href="projects/glow.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
-              <div class="portfolio-wrap">
-                <img src="assets/img/design_projects/glow/glow screen gif.gif" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>glow</h4>
-                  <p>A reimagined livestreaming platform.</p>
                 </div>
               </div>
             </a>
@@ -189,9 +212,10 @@
           </div>
 
           <!-- ======= ENERGY VISUAL ======= -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-fe">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-experiment filter-webdev">
             <ul id="portfolio-tags">
-              <li>front end</li>
+              <li>experiment</li>
+              <li>web dev</li>
             </ul>
             <a href="projects/energy-visual.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
               <div class="portfolio-wrap">
@@ -209,9 +233,9 @@
 
 
            <!-- ======= WEB ======= -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-physical filter-arduino">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-physical filter-installation">
             <ul id="portfolio-tags">
-              <li>arduino</li>
+              <li>installation</li>
             </ul>
             <a href="projects/web.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
               <div class="portfolio-wrap">
@@ -222,25 +246,6 @@
                 <div class="portfolio-info">
                   <h4>web</h4>
                   <p>A human-robot collaboration.</p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- ======= MITBOOK ======= -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-uiux">
-            <ul id="portfolio-tags">
-              <li>ui/ux</li>
-            </ul>
-            <a href="projects/book.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
-              <div class="portfolio-wrap">
-                <img src="assets/img/design_projects/mitbook/loading.gif" class="img-fluid" alt="">
-                <div class="static-img">
-                  <img src="assets/img/design_projects/mitbook/Google Pixel 3 Mockup.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="portfolio-info">
-                  <h4>book</h4>
-                  <p>A booking system for a library's workspaces.</p>
                 </div>
               </div>
             </a>
@@ -267,8 +272,9 @@
           </div>
 
           <!-- ======= IDEO ======= -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-misc">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-research filter-misc">
             <ul id="portfolio-tags">
+              <li>research</li>
               <li>misc</li>
             </ul>
             <a href="projects/ideo.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
@@ -329,7 +335,7 @@
             " class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
             <a href="mailto:ibukiwasaki@gmail.com"><i class="bx bx-envelope"></i></a>
           </div> -->
-          <p>Hello! I'm Ibuki, a Japanese-American designer-developer-researcher who relies on hyphens when describing myself because I dwell in a lot of intersections and wear many hats. My happy place is at the intersection of design, technology, and behavior, and I love experimenting and learning new things in this space. Swipe through the pictures below to find out more about where I'm from, or scroll down to my resume for work and education-related information.</p>
+          <p>Hello! I'm Ibuki, a Japanese-American designer-developer-researcher who relies on hyphens when describing myself because I dwell in a lot of intersections and wear many hats. My happy place is at the intersection of design, technology, and behavior, and I love experimenting and learning new things in this space! Swipe through the pictures below to find out more about where I'm from, or scroll down to my resume for work and education-related information.</p>
           <div class="swiper about-pictures">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
