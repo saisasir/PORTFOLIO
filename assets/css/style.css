@@ -1590,9 +1590,9 @@ section {
 
 /*text heading*/
 .project .caption h2{
-  letter-spacing: 1.5px;
+  letter-spacing: 1.2px;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 700;
   /* text-align: center; */
 }
 
