@@ -1385,9 +1385,16 @@ section {
     margin-bottom: -100px;
     margin-top: -100px;
   }
+
+  .project .single-image.xs {
+    max-width: 500px;
+  }
+
+  .project .single-image.sm {
+    max-width: 700px;
+  }
   
   .project .single-image.md {
-    /* max-height: 90vh; */
     max-width: 900px;
   }
   
