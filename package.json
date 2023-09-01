@@ -1,0 +1,28 @@
+{
+  "name": "saisasir.Github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w assets/scss/ -o assets/css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saisasir.Github.io.git"
+  },
+  "keywords": [
+    "SAI SASIR K",
+    "SaiSasirK",
+    "Portfolio",
+    "Github"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saisasir.Github.io/issues"
+  },
+  "homepage": "https://github.com/saisasir.Github.io#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
