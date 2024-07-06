@@ -63,7 +63,7 @@
   -webkit-backdrop-filter: grayscale(100%) blur(2px);
 }
 .hov .grid li:nth-child(1):hover ~ li:last-child:after {
-  background: #dc7d98;
+  background: #7d7fdc;
 }
 .hov .grid li:nth-child(2):hover ~ li:last-child:after {
   background: #90E0F3;

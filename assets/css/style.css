@@ -11,10 +11,10 @@
 --------------------------------------------------------------*/
 :root {
   /* --main-color: rgb(199,148,196); */
-  --main-color: #c087bd;
+  --main-color: #c58526;
   /* --accent-color: rgb(159,118,156); */
-  --accent-color: #8e558b ;
-  --lighter-color: #ffcdff;
+  --accent-color: #794b00 ;
+  --lighter-color: #d0943a;
   --main-font: "M Plus Rounded 1c", sans-serif;
   --accent-font: "Poppins", sans-serif;
 }
@@ -422,7 +422,7 @@ h6 {
 }
 
 #color-1 {
-  background-color: #c087bd;
+  background-color: #c58526;
   /* background-color: rgb(199,148,196); */
   
 }
@@ -436,7 +436,7 @@ h6 {
 }
 #color-4 {
   /* background-color: rgb(158, 96, 3); */
-  background-color: #9e6003;
+  background-color: #c087bd;
 }
 
 #hero .color-picker a:last-child {

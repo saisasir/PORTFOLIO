@@ -108,7 +108,7 @@ $offset: var(--offset);
       -webkit-backdrop-filter: grayscale(100%) blur(2px);
     }
     //colors (optional)
-    @include colors(5,[#dc7d98, #90E0F3, #79b378, #987E14, #FCAB64]);
+    @include colors(5,[#c087bd, #90E0F3, #79b378, #987E14, #FCAB64]);
   }
 }
 
